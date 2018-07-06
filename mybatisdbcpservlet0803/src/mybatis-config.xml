@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 数据源配置 -->
+	<properties resource="db.properties"></properties>
+	<!-- log4j配置 -->
+	<settings>
+		<setting name="logImpl" value="LOG4J" />
+	</settings>
+	<!-- 实体类别名设置 -->
+	<typeAliases>
+		<!-- 自定义扩展数据源别名 -->
+		<typeAlias type="org.lanqiao.tjut.db.DBCPDataSourceFactory" alias="MYBATIS_DBCP" />
+		<!-- 实体类的别名 -->
+		<typeAlias alias="StudentBean" type="org.lanqiao.tjut.bean.TBStudentBean" />		
+		<typeAlias alias="TBAdminBean" type="org.lanqiao.tjut.bean.TBAdminBean" />	
+	</typeAliases>
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<!-- type指定数据源提供类 -->
+			<dataSource type="MYBATIS_DBCP">
+				<property name="driver" value="${driverClassName}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+				<property name="initialSize" value="${initialSize}" />
+                <property name="maxIdle" value="${maxIdle}" />
+			</dataSource>
+		</environment>
+	</environments>
+
+
+	<!-- 加载系统的mapper映射文件 -->
+	<mappers>
+		<mapper resource="org/lanqiao/tjut/mapper/TBAdminBeanMapper.xml"/>
+	</mappers>
+</configuration>

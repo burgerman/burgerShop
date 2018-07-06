@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace属性的值是 mapper接口类的包的路径名 要求，mapper接口类中的方法名需要和mapper映射文件的id值保持一致 -->
+<mapper namespace="org.lanqiao.tjut.dao.ITBAdminBeanDao">
+	
+	<!-- 查询：返回List实体对象 -->
+	<select id="getUserLoginInfo" resultType="TBAdminBean" parameterType="TBAdminBean">
+		select * from tbadminbean where 
+		admins_name = #{admins_name,jdbcType=VARCHAR} 
+		and admins_psw = #{admins_psw,jdbcType=VARCHAR}
+	</select>	
+</mapper>
