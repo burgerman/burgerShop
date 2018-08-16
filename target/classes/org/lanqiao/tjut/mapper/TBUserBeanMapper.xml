@@ -9,7 +9,7 @@
 	<select id="getUserInfo" resultType="TBUserBean" parameterType="TBUserBean">
 		select * from tbuser where 
 		user_account = #{user_account,jdbcType=VARCHAR} 
-		
+		and user_psw = #{user_psw,jdbcType=VARCHAR}
 		
 	</select>	
 </mapper>

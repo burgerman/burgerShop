@@ -15,15 +15,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class UserInfoAction {
 	
 	@Resource
-	private UserInfoService stuS;
+	private UserInfoService usrS;
 	
 @ResponseBody	
 
-@RequestMapping("/StudentInfoAjaxQueryAction")	
+@RequestMapping("/UserInfoAjaxQueryAction")	
 public List<TBUserBean> selectUserInfoByAccount(TBUserBean userB) {
 	
 	//调用service进行数据库查询操作
-	List<TBUserBean> lstUser = stuS.queryUserInfoByAccount(userB);
+	List<TBUserBean> lstUser = usrS.queryUserInfoByAccount(userB);
 	return lstUser;
 }
 
