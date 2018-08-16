@@ -1,6 +1,6 @@
 package org.lanqiao.tjut.dao;
 
-import java.util.List;
+import java.util.List; 
 
 import org.lanqiao.tjut.bean.TBOperatorBean;
 

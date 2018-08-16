@@ -107,13 +107,8 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-		</dependency>
-		<dependency>
-		    <groupId>javax.servlet</groupId>>
-		    <artifactId>javax.servlet-api</artifactId>
-		    <version>3.1.0</version>
-		</dependency>
+			<version>4.12</version>
+		</dependency>		
 	</dependencies>
 	<build>
 		<finalName>Echarge0817</finalName>

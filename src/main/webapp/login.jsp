@@ -71,7 +71,7 @@
 							 
 							<input type="radio" name="txtNick" id="txtNick1" onclick="sbm2;" value="0"/> 管理员
                            <input type="radio" name="txtNick" id="txtNick2" onclick="sbm1;" value="1"/> 操作员
-							
+							<input type="radio" name="txtNick" id="txtNick3" onclick="sbm3;" value="2"/> 用户
 								
 									
 								
